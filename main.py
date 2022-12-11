@@ -1,16 +1,25 @@
-# This is a sample Python script.
+from tkinter import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+root = Tk()
+root.geometry("700x700")
+root.title("CyberTerminal")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+fg_color = "Cyan"
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def Take_input():
+    INPUT = inputtxt.get("1.0", "end-1c")
+    print(INPUT)
+    if (INPUT == "120"):
+        Output.insert(END, 'Correct')
+    else:
+        Output.insert(END, "Wrong answer")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+inputtxt = Text(root, height=700,
+                width=700,
+                bg="black",
+                fg=fg_color,
+                insertbackground="green")
+inputtxt.pack()
+mainloop()
